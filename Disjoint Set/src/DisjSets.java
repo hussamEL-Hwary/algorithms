@@ -1,5 +1,3 @@
-import java.util.Vector;
-
 public class DisjSets {
 
 	private int[] S;
@@ -30,6 +28,7 @@ public class DisjSets {
 	}
 	
 	public static void main(String[] args) {
+		//simple test
 		DisjSets d=new DisjSets(5);
 		d.unionSets(0, 3);
 		d.unionSets(3, 1);
