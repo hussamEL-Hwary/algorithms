@@ -13,6 +13,7 @@ public class DisjSets {
 	}
 
 	void unionSets(int root1, int root2) {
+		if(find(root1)!=find(root2)) //if two roots in different sets we apply union
 		S[root2] = root1;
 	}
 
@@ -24,11 +25,10 @@ public class DisjSets {
 			return S[x] = find(S[x]);
 	}
 
-	void print()
-   {
-   for(int i=0;i<S.length;++i)
-	   System.out.print(S[i]+" ");
-   }
+	void print() {
+		for (int i = 0; i < S.length; ++i)
+			System.out.print(S[i] + " ");
+	}
 
 	public static void main(String[] args) {
 		// simple test
@@ -38,7 +38,6 @@ public class DisjSets {
 		d.unionSets(1, 5);
 		d.unionSets(2, 4);
 		System.out.println(d.find(3));
-	
 
 	}
 
